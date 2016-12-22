@@ -1,14 +1,6 @@
-//
-//  ViewController.swift
-//  MemeMe
-//
-//  Created by Chirag Aggarwal on 22/12/16.
-//  Copyright © 2016 Chirag Aggarwal. All rights reserved.
-//
-
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +12,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func openGallery(_ sender: Any) {
+        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary)) {
+            let uiImagePicker  : UIImagePickerController = UIImagePickerController()
+            uiImagePicker .allowsEditing = true
+            uiImagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+            uiImagePicker.delegate = self
+            present(uiImagePicker , animated: true, completion: nil )
+        }
+    }
 
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil )
+    }
+ 
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        dismiss(animated: true, completion: nil )
+    }
 }
-
