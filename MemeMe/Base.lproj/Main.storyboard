@@ -81,6 +81,8 @@
                     </view>
                     <connections>
                         <outlet property="image" destination="lTz-9u-QIp" id="bem-G0-xN4"/>
+                        <outlet property="textBottom" destination="Uhq-Ke-p8v" id="OsN-aE-3kc"/>
+                        <outlet property="textTop" destination="3IG-jl-Y0v" id="11l-e7-RR2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
