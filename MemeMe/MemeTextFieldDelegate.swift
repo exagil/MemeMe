@@ -3,14 +3,18 @@ import UIKit
 
 class MemeTextFieldDelegate : NSObject,  UITextFieldDelegate {
     var listener : MemeTextChangedListener
+    var enableKeyboardToggleNotifications : Bool
 
-    init(_ listener : MemeTextChangedListener) {
+    init(_ listener : MemeTextChangedListener, enableKeyboardToggleNotifications : Bool) {
         self.listener = listener
+        self.enableKeyboardToggleNotifications = enableKeyboardToggleNotifications
     }
 
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        NotificationCenter.default.addObserver(self , selector: #selector(keyboardDidShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self , selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        if (enableKeyboardToggleNotifications) {
+            NotificationCenter.default.addObserver(self , selector: #selector(keyboardDidShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
+            NotificationCenter.default.addObserver(self , selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        }
         return true
     }
 

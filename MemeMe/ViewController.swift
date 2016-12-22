@@ -5,15 +5,17 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var textTop: UITextField!
     @IBOutlet weak var textBottom: UITextField!
     private let imageKey : String = "UIImagePickerControllerOriginalImage"
-    private var memeTextFieldDelegate : MemeTextFieldDelegate!
+    private var memeTopTextFieldDelegate : MemeTextFieldDelegate!
+    private var memeBottomTextFieldDelegate : MemeTextFieldDelegate!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         image.clipsToBounds = true
         image.contentMode = .scaleAspectFit
-        memeTextFieldDelegate = MemeTextFieldDelegate(self as MemeTextChangedListener)
-        textTop.delegate = memeTextFieldDelegate
-        textBottom.delegate = memeTextFieldDelegate
+        memeBottomTextFieldDelegate = MemeTextFieldDelegate(self as MemeTextChangedListener, enableKeyboardToggleNotifications: true)
+        memeTopTextFieldDelegate = MemeTextFieldDelegate(self as MemeTextChangedListener, enableKeyboardToggleNotifications: false)
+        textTop.delegate = memeTopTextFieldDelegate
+        textBottom.delegate = memeBottomTextFieldDelegate
     }
 
     override func didReceiveMemoryWarning() {
