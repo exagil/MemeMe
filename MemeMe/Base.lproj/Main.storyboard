@@ -47,19 +47,19 @@
                                 <rect key="frame" x="-4" y="0.0" width="384" height="613"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="3IG-jl-Y0v">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="3IG-jl-Y0v">
                                 <rect key="frame" x="-4" y="53" width="384" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Uhq-Ke-p8v">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Uhq-Ke-p8v">
                                 <rect key="frame" x="-4" y="540" width="384" height="30"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" spellCheckingType="no"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -69,14 +69,14 @@
                             <constraint firstItem="Uhq-Ke-p8v" firstAttribute="top" secondItem="lTz-9u-QIp" secondAttribute="bottom" constant="-73" id="3ax-1F-ZjQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i1T-RT-Exc" secondAttribute="trailing" constant="-16" id="AUm-zi-A6R"/>
                             <constraint firstItem="lTz-9u-QIp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="Dtk-6b-YyU"/>
+                            <constraint firstItem="3IG-jl-Y0v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FPn-hD-KVZ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lTz-9u-QIp" secondAttribute="trailing" constant="-21" id="PQ8-6E-VRu"/>
-                            <constraint firstItem="3IG-jl-Y0v" firstAttribute="centerX" secondItem="lTz-9u-QIp" secondAttribute="centerX" id="XGH-uM-B9t"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="i1T-RT-Exc" secondAttribute="bottom" id="cf1-kP-oht"/>
                             <constraint firstItem="lTz-9u-QIp" firstAttribute="top" secondItem="3IG-jl-Y0v" secondAttribute="bottom" constant="-83" id="eKn-fD-1h6"/>
                             <constraint firstItem="lTz-9u-QIp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="icc-eF-Hvw"/>
                             <constraint firstItem="i1T-RT-Exc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-16" id="jvQ-CW-BQW"/>
+                            <constraint firstItem="Uhq-Ke-p8v" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kGM-gK-X1Z"/>
                             <constraint firstItem="Uhq-Ke-p8v" firstAttribute="width" secondItem="lTz-9u-QIp" secondAttribute="width" id="kN0-2v-krY"/>
-                            <constraint firstItem="Uhq-Ke-p8v" firstAttribute="centerX" secondItem="lTz-9u-QIp" secondAttribute="centerX" id="wfY-jS-t4l"/>
                         </constraints>
                     </view>
                     <connections>

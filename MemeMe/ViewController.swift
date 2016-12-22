@@ -13,6 +13,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
+        initializeMemeTextsWithImpactfulStyle()
         listenToMemeTextChanges()
         toggleCameraButtonBasedOnCameraAvailability()
     }
@@ -47,7 +48,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
          self.view.frame.origin.y += height
     }
 
-     private func openImagePicker(for sourceType : UIImagePickerControllerSourceType) {
+    private func openImagePicker(for sourceType : UIImagePickerControllerSourceType) {
         if (UIImagePickerController.isSourceTypeAvailable(sourceType)) {
             let uiImagePicker : UIImagePickerController = UIImagePickerController()
             uiImagePicker.allowsEditing = true
@@ -70,5 +71,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     private func toggleCameraButtonBasedOnCameraAvailability() {
         buttonCamera.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
+    }
+
+    private func initializeMemeTextsWithImpactfulStyle() {
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = NSTextAlignment.center
+        let memeTextAttributes = [
+            NSStrokeColorAttributeName: UIColor.black,
+            NSForegroundColorAttributeName: UIColor.white,
+            NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            NSStrokeWidthAttributeName: -3.0,
+            NSParagraphStyleAttributeName: paragraphStyle
+            ] as [String : Any]
+        textTop.defaultTextAttributes = memeTextAttributes
+        textBottom .defaultTextAttributes = memeTextAttributes
     }
 }
