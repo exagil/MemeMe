@@ -7,6 +7,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var textBottom: UITextField!
     @IBOutlet weak var buttonCamera: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var topToolbar: UIToolbar!
     @IBOutlet weak var buttonShare: UIBarButtonItem!
     private let imageKey : String = "UIImagePickerControllerOriginalImage"
     private var memeTopTextFieldDelegate : MemeTextFieldDelegate!
@@ -58,7 +59,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let activityViewController : UIActivityViewController = UIActivityViewController (activityItems: [imageMeme], applicationActivities: nil)
         activityViewController.completionWithItemsHandler = {
             (s, ok, items, error) in
-            saveMeme()
+            self.saveMeme()
             self.dismiss(animated: true, completion: nil  )
         }
         present(activityViewController, animated: true, completion: nil)
@@ -104,13 +105,18 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     private func generateMemeImage() -> UIImage {
-        toolbar.isHidden = true
+        hideToolbars(true)
         UIGraphicsBeginImageContext(self.view.frame.size)
         view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-        toolbar.isHidden = false
+        hideToolbars(false)
         return memedImage
+    }
+
+    private func hideToolbars(_ shouldHideToolbars : Bool) {
+        toolbar.isHidden = shouldHideToolbars
+        topToolbar.isHidden = shouldHideToolbars
     }
 
     private func saveMeme () {

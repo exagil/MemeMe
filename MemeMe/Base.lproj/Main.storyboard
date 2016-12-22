@@ -103,6 +103,7 @@
                         <outlet property="textBottom" destination="Uhq-Ke-p8v" id="OsN-aE-3kc"/>
                         <outlet property="textTop" destination="0Ft-OZ-fo8" id="kQc-Wn-RV3"/>
                         <outlet property="toolbar" destination="bay-Zk-pd3" id="HBy-9A-2gJ"/>
+                        <outlet property="topToolbar" destination="kaY-nT-6cC" id="Isg-Q8-cMc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
