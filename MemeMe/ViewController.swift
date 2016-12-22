@@ -1,32 +1,46 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    @IBOutlet weak var image: UIImageView!
+    private let imageKey : String = "UIImagePickerControllerOriginalImage"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     @IBAction func openGallery(_ sender: Any) {
-        if (UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary)) {
-            let uiImagePicker  : UIImagePickerController = UIImagePickerController()
-            uiImagePicker .allowsEditing = true
-            uiImagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
+         openImagePicker(for: UIImagePickerControllerSourceType.photoLibrary)
+    }
+
+    @IBAction func openCamera(_ sender: Any) {
+        openImagePicker(for: UIImagePickerControllerSourceType.camera )
+    }
+
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismissImagePicker()
+    }
+
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image : UIImage = info [imageKey]  as! UIImage
+        self.image.image = image  
+        dismissImagePicker()
+    }
+
+     private func  openImagePicker(for sourceType : UIImagePickerControllerSourceType) {
+        if (UIImagePickerController.isSourceTypeAvailable(sourceType)) {
+            let uiImagePicker : UIImagePickerController = UIImagePickerController()
+            uiImagePicker.allowsEditing = true
+            uiImagePicker.sourceType = sourceType
             uiImagePicker.delegate = self
             present(uiImagePicker , animated: true, completion: nil )
         }
     }
 
-    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        dismiss(animated: true, completion: nil )
-    }
- 
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+    private func dismissImagePicker() {
         dismiss(animated: true, completion: nil )
     }
 }
