@@ -80,7 +80,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="image" destination="lTz-9u-QIp" id="bem-G0-xN4"/>
+                        <outlet property="imageView" destination="lTz-9u-QIp" id="M2s-tC-Cqf"/>
                         <outlet property="textBottom" destination="Uhq-Ke-p8v" id="OsN-aE-3kc"/>
                         <outlet property="textTop" destination="3IG-jl-Y0v" id="11l-e7-RR2"/>
                     </connections>
