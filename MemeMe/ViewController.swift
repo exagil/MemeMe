@@ -4,6 +4,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textTop: UITextField!
     @IBOutlet weak var textBottom: UITextField!
+    @IBOutlet weak var buttonCamera: UIButton!
     private let imageKey : String = "UIImagePickerControllerOriginalImage"
     private var memeTopTextFieldDelegate : MemeTextFieldDelegate!
     private var memeBottomTextFieldDelegate : MemeTextFieldDelegate!
@@ -13,6 +14,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
         listenToMemeTextChanges()
+        toggleCameraButtonBasedOnCameraAvailability()
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,5 +66,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         memeTopTextFieldDelegate = MemeTextFieldDelegate(self as MemeTextChangedListener, enableKeyboardToggleNotifications: false)
         textTop.delegate = memeTopTextFieldDelegate
         textBottom.delegate = memeBottomTextFieldDelegate
+    }
+
+    private func toggleCameraButtonBasedOnCameraAvailability() {
+        buttonCamera.isEnabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
     }
 }

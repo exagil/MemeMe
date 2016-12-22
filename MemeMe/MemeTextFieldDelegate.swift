@@ -11,6 +11,7 @@ class MemeTextFieldDelegate : NSObject,  UITextFieldDelegate {
     }
 
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        textField.text = ""
         if (enableKeyboardToggleNotifications) {
             NotificationCenter.default.addObserver(self , selector: #selector(keyboardDidShow), name: NSNotification.Name.UIKeyboardWillShow, object: nil)
             NotificationCenter.default.addObserver(self , selector: #selector(keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
