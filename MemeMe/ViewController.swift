@@ -5,6 +5,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var textTop: UITextField!
     @IBOutlet weak var textBottom: UITextField!
     @IBOutlet weak var buttonCamera: UIBarButtonItem!
+    @IBOutlet weak var toolbar: UIToolbar!
     private let imageKey : String = "UIImagePickerControllerOriginalImage"
     private var memeTopTextFieldDelegate : MemeTextFieldDelegate!
     private var memeBottomTextFieldDelegate : MemeTextFieldDelegate!
@@ -85,5 +86,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             ] as [String : Any]
         textTop.defaultTextAttributes = memeTextAttributes
         textBottom .defaultTextAttributes = memeTextAttributes
+    }
+
+    private func generateMemeImage() -> UIImage {
+        toolbar.isHidden = true
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        toolbar.isHidden = false
+        return memedImage
     }
 }

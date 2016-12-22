@@ -88,6 +88,7 @@
                         <outlet property="imageView" destination="lTz-9u-QIp" id="M2s-tC-Cqf"/>
                         <outlet property="textBottom" destination="Uhq-Ke-p8v" id="OsN-aE-3kc"/>
                         <outlet property="textTop" destination="0Ft-OZ-fo8" id="kQc-Wn-RV3"/>
+                        <outlet property="toolbar" destination="bay-Zk-pd3" id="HBy-9A-2gJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
