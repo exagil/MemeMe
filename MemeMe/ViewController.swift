@@ -4,7 +4,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textTop: UITextField!
     @IBOutlet weak var textBottom: UITextField!
-    @IBOutlet weak var buttonCamera: UIButton!
+    @IBOutlet weak var buttonCamera: UIBarButtonItem!
     private let imageKey : String = "UIImagePickerControllerOriginalImage"
     private var memeTopTextFieldDelegate : MemeTextFieldDelegate!
     private var memeBottomTextFieldDelegate : MemeTextFieldDelegate!
@@ -79,7 +79,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let memeTextAttributes = [
             NSStrokeColorAttributeName: UIColor.black,
             NSForegroundColorAttributeName: UIColor.white,
-            NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 40)!,
+            NSFontAttributeName: UIFont(name: "HelveticaNeue-CondensedBlack", size: 60)!,
             NSStrokeWidthAttributeName: -3.0,
             NSParagraphStyleAttributeName: paragraphStyle
             ] as [String : Any]
