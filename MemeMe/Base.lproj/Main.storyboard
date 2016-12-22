@@ -57,7 +57,11 @@
                             <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kaY-nT-6cC">
                                 <rect key="frame" x="-4" y="0.0" width="328" height="44"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="action" id="JI6-N2-IkY"/>
+                                    <barButtonItem style="plain" systemItem="action" id="JI6-N2-IkY">
+                                        <connections>
+                                            <action selector="onClickShareButton:" destination="BYZ-38-t0r" id="lnB-sr-gh5"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="0Ft-OZ-fo8">

@@ -1,6 +1,7 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MemeTextChangedListener {
+
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textTop: UITextField!
     @IBOutlet weak var textBottom: UITextField!
@@ -50,6 +51,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     func onMemeTextChangeEnd(_ height : CGFloat) {
          self.view.frame.origin.y += height
+    }
+
+    @IBAction func onClickShareButton(_ sender: Any) {
+        let imageMeme : UIImage = generateMemeImage()
+        let activityViewController : UIActivityViewController = UIActivityViewController (activityItems: [imageMeme], applicationActivities: nil)
+        activityViewController.completionWithItemsHandler = {
+            (s, ok, items, error) in
+            self.dismiss(animated: true, completion: nil  )
+        }
+        present(activityViewController, animated: true, completion: nil)
     }
 
     private func openImagePicker(for sourceType : UIImagePickerControllerSourceType) {
