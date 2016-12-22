@@ -6,6 +6,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        image.clipsToBounds = true
+        image.contentMode = .scaleAspectFit
     }
 
     override func didReceiveMemoryWarning() {
