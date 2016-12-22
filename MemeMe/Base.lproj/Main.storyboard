@@ -94,6 +94,7 @@
                     </view>
                     <connections>
                         <outlet property="buttonCamera" destination="a6V-Iz-OZs" id="6pg-jj-ZB1"/>
+                        <outlet property="buttonShare" destination="JI6-N2-IkY" id="q8c-Cd-dbA"/>
                         <outlet property="imageView" destination="lTz-9u-QIp" id="M2s-tC-Cqf"/>
                         <outlet property="textBottom" destination="Uhq-Ke-p8v" id="OsN-aE-3kc"/>
                         <outlet property="textTop" destination="0Ft-OZ-fo8" id="kQc-Wn-RV3"/>

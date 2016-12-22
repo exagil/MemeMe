@@ -6,6 +6,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var textBottom: UITextField!
     @IBOutlet weak var buttonCamera: UIBarButtonItem!
     @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var buttonShare: UIBarButtonItem!
     private let imageKey : String = "UIImagePickerControllerOriginalImage"
     private var memeTopTextFieldDelegate : MemeTextFieldDelegate!
     private var memeBottomTextFieldDelegate : MemeTextFieldDelegate!
@@ -17,6 +18,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         initializeMemeTextsWithImpactfulStyle()
         listenToMemeTextChanges()
         toggleCameraButtonBasedOnCameraAvailability()
+        buttonShare.isEnabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,6 +40,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image : UIImage = info [imageKey]  as! UIImage
         self.imageView.image = image
+        buttonShare.isEnabled = true
         dismissImagePicker()
     }
 
