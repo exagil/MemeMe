@@ -12,10 +12,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.viewDidLoad()
         imageView.clipsToBounds = true
         imageView.contentMode = .scaleAspectFit
-        memeBottomTextFieldDelegate = MemeTextFieldDelegate(self as MemeTextChangedListener, enableKeyboardToggleNotifications: true)
-        memeTopTextFieldDelegate = MemeTextFieldDelegate(self as MemeTextChangedListener, enableKeyboardToggleNotifications: false)
-        textTop.delegate = memeTopTextFieldDelegate
-        textBottom.delegate = memeBottomTextFieldDelegate
+        listenToMemeTextChanges()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,7 +37,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismissImagePicker()
     }
 
-    func  onMemeTextChangeStarted(_ height : CGFloat) {
+    func onMemeTextChangeStarted(_ height : CGFloat) {
         self.view.frame.origin.y -= height
     }
 
@@ -48,7 +45,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
          self.view.frame.origin.y += height
     }
 
-     private func  openImagePicker(for sourceType : UIImagePickerControllerSourceType) {
+     private func openImagePicker(for sourceType : UIImagePickerControllerSourceType) {
         if (UIImagePickerController.isSourceTypeAvailable(sourceType)) {
             let uiImagePicker : UIImagePickerController = UIImagePickerController()
             uiImagePicker.allowsEditing = true
@@ -60,5 +57,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     private func dismissImagePicker() {
         dismiss(animated: true, completion: nil )
+    }
+
+    private func listenToMemeTextChanges() {
+        memeBottomTextFieldDelegate = MemeTextFieldDelegate(self as MemeTextChangedListener, enableKeyboardToggleNotifications: true)
+        memeTopTextFieldDelegate = MemeTextFieldDelegate(self as MemeTextChangedListener, enableKeyboardToggleNotifications: false)
+        textTop.delegate = memeTopTextFieldDelegate
+        textBottom.delegate = memeBottomTextFieldDelegate
     }
 }
