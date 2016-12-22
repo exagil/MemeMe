@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  MemeMe
-//
-//  Created by Chirag Aggarwal on 22/12/16.
-//  Copyright © 2016 Chirag Aggarwal. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
