@@ -58,6 +58,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let activityViewController : UIActivityViewController = UIActivityViewController (activityItems: [imageMeme], applicationActivities: nil)
         activityViewController.completionWithItemsHandler = {
             (s, ok, items, error) in
+            saveMeme()
             self.dismiss(animated: true, completion: nil  )
         }
         present(activityViewController, animated: true, completion: nil)
@@ -110,5 +111,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         UIGraphicsEndImageContext()
         toolbar.isHidden = false
         return memedImage
+    }
+
+    private func saveMeme () {
+        Meme(topText: textTop.text!, bottomText: textBottom.text!, memeImage: imageView.image!) 
     }
 }
