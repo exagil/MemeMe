@@ -17,6 +17,7 @@
 		DF52A2E71E0B9BA000E06E92 /* MemeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF52A2E61E0B9BA000E06E92 /* MemeTextFieldDelegate.swift */; };
 		DF52A2E91E0BA4EB00E06E92 /* MemeTextChangedListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF52A2E81E0BA4EB00E06E92 /* MemeTextChangedListener.swift */; };
 		DF52A2EB1E0C329300E06E92 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF52A2EA1E0C329300E06E92 /* Meme.swift */; };
+		DF8A110F1E0E67E6005C3F16 /* SentMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF8A110E1E0E67E6005C3F16 /* SentMemeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		DF52A2E61E0B9BA000E06E92 /* MemeTextFieldDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTextFieldDelegate.swift; sourceTree = "<group>"; };
 		DF52A2E81E0BA4EB00E06E92 /* MemeTextChangedListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTextChangedListener.swift; sourceTree = "<group>"; };
 		DF52A2EA1E0C329300E06E92 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		DF8A110E1E0E67E6005C3F16 /* SentMemeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentMemeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +114,7 @@
 				DF52A2E61E0B9BA000E06E92 /* MemeTextFieldDelegate.swift */,
 				DF52A2E81E0BA4EB00E06E92 /* MemeTextChangedListener.swift */,
 				DF52A2EA1E0C329300E06E92 /* Meme.swift */,
+				DF8A110E1E0E67E6005C3F16 /* SentMemeViewController.swift */,
 			);
 			path = MemeMe;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				DF52A2E91E0BA4EB00E06E92 /* MemeTextChangedListener.swift in Sources */,
 				DF52A2E71E0B9BA000E06E92 /* MemeTextFieldDelegate.swift in Sources */,
 				DF52A2B91E0B776300E06E92 /* AppDelegate.swift in Sources */,
+				DF8A110F1E0E67E6005C3F16 /* SentMemeViewController.swift in Sources */,
 				DF52A2EB1E0C329300E06E92 /* Meme.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -517,6 +521,7 @@
 				DF52A2DF1E0B776300E06E92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF52A2E01E0B776300E06E92 /* Build configuration list for PBXNativeTarget "MemeMeTests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +530,7 @@
 				DF52A2E21E0B776300E06E92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DF52A2E31E0B776300E06E92 /* Build configuration list for PBXNativeTarget "MemeMeUITests" */ = {
 			isa = XCConfigurationList;
@@ -533,6 +539,7 @@
 				DF52A2E51E0B776300E06E92 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
