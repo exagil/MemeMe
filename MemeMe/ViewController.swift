@@ -120,6 +120,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
 
     private func saveMeme () {
-        Meme(topText: textTop.text!, bottomText: textBottom.text!, memeImage: imageView.image!) 
+        let meme : Meme = Meme(topText: textTop.text!, bottomText: textBottom.text!, memeImage: imageView.image!)
+        MemesRepository.getInstance().insert(meme)
     }
 }

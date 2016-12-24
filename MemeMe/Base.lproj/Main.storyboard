@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -32,7 +33,7 @@
         <!--Item 1-->
         <scene sceneID="iAg-Po-vgd">
             <objects>
-                <viewController id="T52-zG-aaW" sceneMemberID="viewController">
+                <viewController id="T52-zG-aaW" customClass="SentMemeTableViewController" customModule="MemeMe" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7a5-eD-tEH"/>
                         <viewControllerLayoutGuide type="bottom" id="Qgo-Fc-Q4N"/>
@@ -40,18 +41,56 @@
                     <view key="view" contentMode="scaleToFill" id="RNr-mR-DLO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ak4-01-jeb">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableCellMeme" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCellMeme" id="LPb-GA-Uhx" customClass="MemeTableViewCell" customModule="MemeMe">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="LPb-GA-Uhx" id="tRn-U1-AcL">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="STN-aV-nmd">
+                                                    <rect key="frame" x="8" y="-29" width="100" height="100"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="100" id="3de-mR-qLi"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="A9Z-aG-QJb"/>
+                                                        <constraint firstAttribute="height" constant="100" id="Bsf-UI-M0W"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="100" id="sqE-LW-g8L"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="STN-aV-nmd" firstAttribute="width" secondItem="tRn-U1-AcL" secondAttribute="height" multiplier="100:43" id="01B-e7-Ofu"/>
+                                                <constraint firstItem="STN-aV-nmd" firstAttribute="centerY" secondItem="tRn-U1-AcL" secondAttribute="centerY" id="BuR-To-6Ig"/>
+                                                <constraint firstItem="STN-aV-nmd" firstAttribute="leading" secondItem="tRn-U1-AcL" secondAttribute="leadingMargin" id="Xo3-Bg-ddH"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imageMeme" destination="STN-aV-nmd" id="KpU-rW-bZk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="0Ij-ry-KQc"/>
+                    <connections>
+                        <outlet property="tableMemes" destination="ak4-01-jeb" id="9zr-OD-5bt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2G-Bi-NXc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-223" y="923"/>
+            <point key="canvasLocation" x="-223.125" y="922.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="QEE-px-ssx">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="h6i-aZ-K7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController id="0ez-nm-OHu" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="cG7-Cr-Lrb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -61,6 +100,7 @@
                         <segue destination="F6A-nA-V21" kind="relationship" relationship="rootViewController" id="3of-HL-DYE"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="h6i-aZ-K7Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2383" y="1453"/>
         </scene>
