@@ -13,7 +13,7 @@ class SentMemeViewController: UITabBarController {
     }
     
     func onClickNewMemeButton() {
-        let memeViewController : ViewController = self.storyboard?.instantiateViewController(withIdentifier: "MemeViewController") as! ViewController
+        let memeViewController : ViewController = self.storyboard?.instantiateViewController(withIdentifier: "EditMemeViewController") as! ViewController
         present(memeViewController, animated: true, completion: nil)
     }
 }

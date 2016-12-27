@@ -1,12 +1,13 @@
 import UIKit
 
-class SentMemeTableViewController: UIViewController, UITableViewDataSource {
+class SentMemeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableMemes: UITableView!
     var memes : [Meme] = [Meme]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableMemes.dataSource = self
+        tableMemes.delegate = self
     }
 
      override func viewWillAppear(_ animated: Bool) {
@@ -24,5 +25,11 @@ class SentMemeTableViewController: UIViewController, UITableViewDataSource {
         tableCellMeme.textLabel!.text = meme.topText + "..." + meme.bottomText
         tableCellMeme.imageView?.image = meme.memeImage
         return tableCellMeme
+    }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let memeDetailViewController : MemeDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
+        memeDetailViewController.meme = memes[indexPath.row]
+        navigationController?.pushViewController(memeDetailViewController, animated: true)
     }
 }

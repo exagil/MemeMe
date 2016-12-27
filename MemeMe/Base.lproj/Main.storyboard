@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -85,11 +84,11 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableCellMeme" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCellMeme" id="LPb-GA-Uhx" customClass="MemeTableViewCell" customModule="MemeMe">
                                         <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="LPb-GA-Uhx" id="tRn-U1-AcL">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LPb-GA-Uhx" id="tRn-U1-AcL">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="STN-aV-nmd">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="STN-aV-nmd">
                                                     <rect key="frame" x="8" y="-29" width="100" height="100"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="3de-mR-qLi"/>
@@ -98,9 +97,8 @@
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="STN-aV-nmd" firstAttribute="width" secondItem="tRn-U1-AcL" secondAttribute="height" multiplier="100:43" id="01B-e7-Ofu"/>
-                                                <constraint firstItem="STN-aV-nmd" firstAttribute="centerY" secondItem="tRn-U1-AcL" secondAttribute="centerY" id="BuR-To-6Ig"/>
-                                                <constraint firstItem="STN-aV-nmd" firstAttribute="leading" secondItem="tRn-U1-AcL" secondAttribute="leadingMargin" id="Xo3-Bg-ddH"/>
+                                                <constraint firstItem="STN-aV-nmd" firstAttribute="leading" secondItem="tRn-U1-AcL" secondAttribute="leadingMargin" id="wiR-Kc-QOy"/>
+                                                <constraint firstItem="STN-aV-nmd" firstAttribute="centerY" secondItem="tRn-U1-AcL" secondAttribute="centerY" id="zOh-Nh-Aq2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -156,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="-1476" y="1453"/>
         </scene>
-        <!--View Controller-->
+        <!--Edit Meme View Controller-->
         <scene sceneID="xo4-f3-hZN">
             <objects>
-                <viewController storyboardIdentifier="MemeViewController" id="vSO-Fy-fMW" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditMemeViewController" id="vSO-Fy-fMW" userLabel="Edit Meme View Controller" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6wo-G2-Yjn"/>
                         <viewControllerLayoutGuide type="bottom" id="oCs-Nk-iK2"/>
@@ -254,7 +252,65 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xeg-nt-UfD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="823" y="1453"/>
+            <point key="canvasLocation" x="1446" y="1453"/>
+        </scene>
+        <!--Meme Detail View Controller-->
+        <scene sceneID="F2g-Dz-lfA">
+            <objects>
+                <viewController storyboardIdentifier="MemeDetailViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="FQa-FQ-biU" customClass="MemeDetailViewController" customModule="MemeMe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NRo-P9-DOs"/>
+                        <viewControllerLayoutGuide type="bottom" id="65h-bg-ePt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="PaA-Bn-sq3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4q-VQ-OKg">
+                                <rect key="frame" x="-4" y="0.0" width="329" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="h2E-kP-www">
+                                <rect key="frame" x="68" y="344" width="184" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" spellCheckingType="no"/>
+                            </textField>
+                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Kr-U6-Aha">
+                                <rect key="frame" x="-4" y="0.0" width="328" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="edit" id="wlZ-6A-PAJ" userLabel="Button Edit">
+                                        <connections>
+                                            <action selector="onClickShareButton:" destination="FQa-FQ-biU" id="cKf-QY-j9m"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jmi-yT-Qvm">
+                                <rect key="frame" x="112" y="96" width="97" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" spellCheckingType="no"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="buttonEdit" destination="wlZ-6A-PAJ" id="TrT-gs-JE2"/>
+                        <outlet property="imageMeme" destination="r4q-VQ-OKg" id="svb-tv-KrM"/>
+                        <outlet property="textBottom" destination="h2E-kP-www" id="igY-mo-l5J"/>
+                        <outlet property="textTop" destination="Jmi-yT-Qvm" id="vnr-AP-4DQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3F-Jt-fa7" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="645" y="1453"/>
         </scene>
     </scenes>
 </document>
