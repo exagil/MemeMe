@@ -27,6 +27,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         super.didReceiveMemoryWarning()
     }
 
+    @IBAction func onClickCancelButton(_ sender: Any) {
+        dismissImagePicker()
+    }
+
     @IBAction func openGallery(_ sender: Any) {
          openImagePicker(for: UIImagePickerControllerSourceType.photoLibrary)
     }
