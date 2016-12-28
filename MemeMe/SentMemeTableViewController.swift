@@ -36,4 +36,16 @@ class SentMemeTableViewController: UIViewController, UITableViewDataSource, UITa
         memeDetailViewController.meme = memes[indexPath.row]
         navigationController?.pushViewController(memeDetailViewController, animated: true)
     }
+
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            memes.remove(at: indexPath.row)
+            MemesRepository.getInstance().remove(indexPath.row)
+            tableView.reloadData()
+        }
+    }
 }

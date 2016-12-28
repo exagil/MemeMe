@@ -19,4 +19,8 @@ class MemesRepository {
     public func insert(_ meme : Meme) {
         memeCollection.append(meme)
     }
+
+    public func remove(_ index : Int) {
+        memeCollection.remove(at: index)
+    }
 }
