@@ -22,9 +22,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kdj-4k-fSa">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="kdj-4k-fSa">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="USK-MA-alo">
                                     <size key="itemSize" width="100" height="100"/>
@@ -54,6 +53,12 @@
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kdj-4k-fSa" firstAttribute="leading" secondItem="DOl-DB-FjA" secondAttribute="leadingMargin" constant="-16" id="3bJ-M5-OhQ"/>
+                            <constraint firstItem="MzC-aA-z7t" firstAttribute="top" secondItem="kdj-4k-fSa" secondAttribute="bottom" id="LWa-Yr-rph"/>
+                            <constraint firstItem="kdj-4k-fSa" firstAttribute="top" secondItem="7dP-1a-EWb" secondAttribute="bottom" constant="-64" id="skx-nw-9u7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kdj-4k-fSa" secondAttribute="trailing" constant="-16" id="t2m-51-uqy"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 2" id="fCc-JH-Mtj"/>
                     <connections>
@@ -76,20 +81,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ak4-01-jeb">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="431"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ak4-01-jeb">
+                                <rect key="frame" x="0.0" y="20" width="320" height="411"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableCellMeme" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCellMeme" rowHeight="100" id="LPb-GA-Uhx" customClass="MemeTableViewCell" customModule="MemeMe">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="100"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="tableCellMeme" selectionStyle="default" indentationWidth="10" reuseIdentifier="tableCellMeme" rowHeight="44" id="LPb-GA-Uhx" customClass="MemeTableViewCell" customModule="MemeMe">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LPb-GA-Uhx" id="tRn-U1-AcL">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="99"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="STN-aV-nmd">
-                                                    <rect key="frame" x="8" y="-1" width="100" height="101"/>
+                                                    <rect key="frame" x="8" y="-1" width="100" height="45.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="100" id="9CC-ft-xa0"/>
                                                     </constraints>
@@ -109,6 +113,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Qgo-Fc-Q4N" firstAttribute="top" secondItem="ak4-01-jeb" secondAttribute="bottom" id="8Om-Z7-bzR"/>
+                            <constraint firstItem="ak4-01-jeb" firstAttribute="leading" secondItem="RNr-mR-DLO" secondAttribute="leadingMargin" constant="-16" id="QgW-Vh-arM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ak4-01-jeb" secondAttribute="trailing" constant="-16" id="WpZ-wD-wEb"/>
+                            <constraint firstItem="ak4-01-jeb" firstAttribute="top" secondItem="RNr-mR-DLO" secondAttribute="top" constant="20" id="r67-bx-vLi"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="0Ij-ry-KQc"/>
                     <connections>
@@ -272,51 +282,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="r4q-VQ-OKg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r4q-VQ-OKg">
                                 <rect key="frame" x="-4" y="0.0" width="329" height="480"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="h2E-kP-www">
-                                <rect key="frame" x="68" y="344" width="184" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRZ-SU-M8D" userLabel="Text Top">
+                                <rect key="frame" x="122" y="92" width="76" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" spellCheckingType="no"/>
-                            </textField>
-                            <toolbar opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Kr-U6-Aha">
-                                <rect key="frame" x="-4" y="0.0" width="328" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <barButtonItem style="plain" systemItem="edit" id="wlZ-6A-PAJ" userLabel="Button Edit">
-                                        <connections>
-                                            <action selector="onClickShareButton:" destination="FQa-FQ-biU" id="cKf-QY-j9m"/>
-                                        </connections>
-                                    </barButtonItem>
-                                </items>
-                            </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" borderStyle="roundedRect" textAlignment="center" minimumFontSize="40" translatesAutoresizingMaskIntoConstraints="NO" id="Jmi-yT-Qvm">
-                                <rect key="frame" x="112" y="96" width="97" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOTTOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXB-Q8-Ycc" userLabel="Text Bottom">
+                                <rect key="frame" x="79" y="358" width="162.5" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" spellCheckingType="no"/>
-                            </textField>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="r4q-VQ-OKg" firstAttribute="leading" secondItem="PaA-Bn-sq3" secondAttribute="leadingMargin" constant="-20" id="0D5-Xm-0LU"/>
+                            <constraint firstItem="65h-bg-ePt" firstAttribute="top" secondItem="mXB-Q8-Ycc" secondAttribute="bottom" constant="74" id="7Zg-dV-J2q"/>
+                            <constraint firstItem="gRZ-SU-M8D" firstAttribute="top" secondItem="NRo-P9-DOs" secondAttribute="bottom" constant="72" id="EhZ-QH-ZoZ"/>
+                            <constraint firstItem="gRZ-SU-M8D" firstAttribute="centerX" secondItem="PaA-Bn-sq3" secondAttribute="centerX" id="FHx-vc-APn"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="r4q-VQ-OKg" secondAttribute="trailing" constant="-21" id="ZBZ-3A-hdt"/>
+                            <constraint firstItem="r4q-VQ-OKg" firstAttribute="top" secondItem="NRo-P9-DOs" secondAttribute="bottom" constant="-20" id="c0e-ea-PbW"/>
+                            <constraint firstItem="mXB-Q8-Ycc" firstAttribute="centerX" secondItem="PaA-Bn-sq3" secondAttribute="centerX" id="dF1-rN-eop"/>
+                            <constraint firstItem="65h-bg-ePt" firstAttribute="top" secondItem="r4q-VQ-OKg" secondAttribute="bottom" id="m0e-OY-XIB"/>
+                        </constraints>
                     </view>
                     <connections>
-                        <outlet property="buttonEdit" destination="wlZ-6A-PAJ" id="TrT-gs-JE2"/>
                         <outlet property="imageMeme" destination="r4q-VQ-OKg" id="svb-tv-KrM"/>
-                        <outlet property="textBottom" destination="h2E-kP-www" id="igY-mo-l5J"/>
-                        <outlet property="textTop" destination="Jmi-yT-Qvm" id="vnr-AP-4DQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3F-Jt-fa7" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="645" y="1453"/>
+            <point key="canvasLocation" x="645" y="1452.5"/>
         </scene>
     </scenes>
 </document>

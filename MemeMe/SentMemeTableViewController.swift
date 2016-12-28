@@ -26,6 +26,10 @@ class SentMemeTableViewController: UIViewController, UITableViewDataSource, UITa
         tableCellMeme.imageView?.image = meme.memeImage
         return tableCellMeme
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return CGFloat(100)
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let memeDetailViewController : MemeDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "MemeDetailViewController") as! MemeDetailViewController
