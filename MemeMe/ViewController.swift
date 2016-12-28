@@ -12,15 +12,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     private let imageKey : String = "UIImagePickerControllerOriginalImage"
     private var memeTopTextFieldDelegate : MemeTextFieldDelegate!
     private var memeBottomTextFieldDelegate : MemeTextFieldDelegate!
+    var memeToEdit : Meme!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        imageView.clipsToBounds = true
-        imageView.contentMode = .scaleAspectFit
-        initializeMemeTextsWithImpactfulStyle()
+        initializeLayout()
         listenToMemeTextChanges()
         toggleCameraButtonBasedOnCameraAvailability()
-        buttonShare.isEnabled = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -105,7 +103,29 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             NSParagraphStyleAttributeName: paragraphStyle
             ] as [String : Any]
         textTop.defaultTextAttributes = memeTextAttributes
-        textBottom .defaultTextAttributes = memeTextAttributes
+        textBottom.defaultTextAttributes = memeTextAttributes
+        textTop.text = (memeToEdit == nil) ? "TOP" : memeToEdit.topText
+        textBottom.text = (memeToEdit == nil) ? "BOTTOM" : memeToEdit.bottomText
+    }
+
+    private func initializeLayout() {
+        initializeMemeImage()
+        initializeMemeTextsWithImpactfulStyle()
+        initializeButtonShareEnabledState()
+    }
+
+    private func initializeButtonShareEnabledState() {
+        if (memeToEdit == nil) {
+            buttonShare.isEnabled = false
+        } else {
+            buttonShare.isEnabled = true
+        }
+    }
+
+    private func initializeMemeImage() {
+        imageView.clipsToBounds = true
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = (memeToEdit == nil) ? nil : memeToEdit.memeImageOriginal
     }
 
     private func generateMemeImage() -> UIImage {

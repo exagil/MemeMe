@@ -8,5 +8,13 @@ class MemeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         imageMeme.image = meme.memeImage
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit", style: UIBarButtonItemStyle.plain, target: self, action: #selector(onClickEdit))
+    }
+
+    func onClickEdit() {
+        let editMemeViewController : ViewController = storyboard?.instantiateViewController(withIdentifier: "EditMemeViewController") as! ViewController
+        print(meme.memeImageOriginal)
+        editMemeViewController.memeToEdit = meme
+        present(editMemeViewController, animated: true, completion: nil)
     }
 }
