@@ -60,7 +60,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="kdj-4k-fSa" secondAttribute="trailing" constant="-16" id="t2m-51-uqy"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="fCc-JH-Mtj"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_collection" selectedImage="icon_collection" id="fCc-JH-Mtj">
+                        <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="0.0"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="collectionViewMemes" destination="kdj-4k-fSa" id="77H-dc-u33"/>
                     </connections>
@@ -69,7 +71,7 @@
             </objects>
             <point key="canvasLocation" x="-223.125" y="1905"/>
         </scene>
-        <!--Item 1-->
+        <!--Sent Meme Table View Controller-->
         <scene sceneID="iAg-Po-vgd">
             <objects>
                 <viewController id="T52-zG-aaW" customClass="SentMemeTableViewController" customModule="MemeMe" sceneMemberID="viewController">
@@ -120,7 +122,7 @@
                             <constraint firstItem="ak4-01-jeb" firstAttribute="top" secondItem="RNr-mR-DLO" secondAttribute="top" constant="20" id="r67-bx-vLi"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="0Ij-ry-KQc"/>
+                    <tabBarItem key="tabBarItem" image="icon_table" id="0Ij-ry-KQc"/>
                     <connections>
                         <outlet property="tableMemes" destination="ak4-01-jeb" id="9zr-OD-5bt"/>
                     </connections>
@@ -304,4 +306,8 @@
             <point key="canvasLocation" x="645" y="1452.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_collection" width="30" height="30"/>
+        <image name="icon_table" width="30" height="30"/>
+    </resources>
 </document>
