@@ -63,7 +63,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let activityViewController : UIActivityViewController = UIActivityViewController (activityItems: [imageMeme], applicationActivities: nil)
         activityViewController.completionWithItemsHandler = {
             (s, ok, items, error) in
-            self.saveMeme()
+            self.saveMeme(withImage: imageMeme)
             self.dismiss(animated: true, completion: nil  )
         }
         present(activityViewController, animated: true, completion: nil)
@@ -123,8 +123,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         topToolbar.isHidden = shouldHideToolbars
     }
 
-    private func saveMeme () {
-        let meme : Meme = Meme(topText: textTop.text!, bottomText: textBottom.text!, memeImage: imageView.image!)
+    private func saveMeme(withImage image : UIImage) {
+        let meme : Meme = Meme(topText: textTop.text!, bottomText: textBottom.text!, memeImageOriginal: imageView.image!, memeImage: image)
         MemesRepository.getInstance().insert(meme)
     }
 }

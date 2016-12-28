@@ -282,32 +282,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r4q-VQ-OKg">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r4q-VQ-OKg">
                                 <rect key="frame" x="-4" y="0.0" width="329" height="480"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOP" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gRZ-SU-M8D" userLabel="Text Top">
-                                <rect key="frame" x="122" y="92" width="76" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BOTTOM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mXB-Q8-Ycc" userLabel="Text Bottom">
-                                <rect key="frame" x="79" y="358" width="162.5" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="r4q-VQ-OKg" firstAttribute="leading" secondItem="PaA-Bn-sq3" secondAttribute="leadingMargin" constant="-20" id="0D5-Xm-0LU"/>
-                            <constraint firstItem="65h-bg-ePt" firstAttribute="top" secondItem="mXB-Q8-Ycc" secondAttribute="bottom" constant="74" id="7Zg-dV-J2q"/>
-                            <constraint firstItem="gRZ-SU-M8D" firstAttribute="top" secondItem="NRo-P9-DOs" secondAttribute="bottom" constant="72" id="EhZ-QH-ZoZ"/>
-                            <constraint firstItem="gRZ-SU-M8D" firstAttribute="centerX" secondItem="PaA-Bn-sq3" secondAttribute="centerX" id="FHx-vc-APn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="r4q-VQ-OKg" secondAttribute="trailing" constant="-21" id="ZBZ-3A-hdt"/>
                             <constraint firstItem="r4q-VQ-OKg" firstAttribute="top" secondItem="NRo-P9-DOs" secondAttribute="bottom" constant="-20" id="c0e-ea-PbW"/>
-                            <constraint firstItem="mXB-Q8-Ycc" firstAttribute="centerX" secondItem="PaA-Bn-sq3" secondAttribute="centerX" id="dF1-rN-eop"/>
                             <constraint firstItem="65h-bg-ePt" firstAttribute="top" secondItem="r4q-VQ-OKg" secondAttribute="bottom" id="m0e-OY-XIB"/>
                         </constraints>
                     </view>
