@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MemeTextChangedListener {
+class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MemeTextChangedListener {
 
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var textTop: UITextField!

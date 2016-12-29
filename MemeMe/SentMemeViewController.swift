@@ -6,14 +6,9 @@ class SentMemeViewController: UITabBarController {
         super.viewDidLoad()
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(onClickNewMemeButton))
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     func onClickNewMemeButton() {
-        let memeViewController : ViewController = self.storyboard?.instantiateViewController(withIdentifier: "EditMemeViewController") as! ViewController
+        let memeViewController : EditMemeViewController = self.storyboard?.instantiateViewController(withIdentifier: "EditMemeViewController") as! EditMemeViewController
         present(memeViewController, animated: true, completion: nil)
     }
 }

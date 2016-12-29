@@ -169,7 +169,7 @@
         <!--Edit Meme View Controller-->
         <scene sceneID="xo4-f3-hZN">
             <objects>
-                <viewController storyboardIdentifier="EditMemeViewController" id="vSO-Fy-fMW" userLabel="Edit Meme View Controller" customClass="ViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EditMemeViewController" id="vSO-Fy-fMW" userLabel="Edit Meme View Controller" customClass="EditMemeViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="6wo-G2-Yjn"/>
                         <viewControllerLayoutGuide type="bottom" id="oCs-Nk-iK2"/>

@@ -12,7 +12,7 @@ class MemeDetailViewController: UIViewController {
     }
 
     func onClickEdit() {
-        let editMemeViewController : ViewController = storyboard?.instantiateViewController(withIdentifier: "EditMemeViewController") as! ViewController
+        let editMemeViewController : EditMemeViewController = storyboard?.instantiateViewController(withIdentifier: "EditMemeViewController") as! EditMemeViewController
         print(meme.memeImageOriginal)
         editMemeViewController.memeToEdit = meme
         present(editMemeViewController, animated: true, completion: nil)
