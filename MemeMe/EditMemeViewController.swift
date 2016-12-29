@@ -43,17 +43,17 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
 
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         let image : UIImage = info [imageKey]  as! UIImage
-        self.imageView.image = image
+        imageView.image = image
         buttonShare.isEnabled = true
         dismissImagePicker()
     }
 
     func onMemeTextChangeStarted(_ height : CGFloat) {
-        self.view.frame.origin.y -= height
+        view.frame.origin.y = height * -1
     }
 
     func onMemeTextChangeEnd(_ height : CGFloat) {
-         self.view.frame.origin.y += height
+        view.frame.origin.y = 0
     }
 
     @IBAction func onClickShareButton(_ sender: Any) {
@@ -70,7 +70,7 @@ class EditMemeViewController: UIViewController, UIImagePickerControllerDelegate,
     private func openImagePicker(for sourceType : UIImagePickerControllerSourceType) {
         if (UIImagePickerController.isSourceTypeAvailable(sourceType)) {
             let uiImagePicker : UIImagePickerController = UIImagePickerController()
-            uiImagePicker.allowsEditing = true
+            uiImagePicker.allowsEditing = false
             uiImagePicker.sourceType = sourceType
             uiImagePicker.delegate = self
             present(uiImagePicker , animated: true, completion: nil )
