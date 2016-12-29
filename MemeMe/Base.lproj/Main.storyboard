@@ -201,7 +201,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="43c-4W-gQN">
-                                <rect key="frame" x="76.5" y="336" width="167" height="48"/>
+                                <rect key="frame" x="0.0" y="336" width="320" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -224,7 +224,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="FJd-Kt-t0k">
-                                <rect key="frame" x="120.5" y="96" width="80" height="48"/>
+                                <rect key="frame" x="0.0" y="96" width="320" height="48"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -239,15 +239,19 @@
                             <constraint firstItem="78z-ja-4Dv" firstAttribute="leading" secondItem="93T-hj-QBo" secondAttribute="leadingMargin" constant="-20" id="I4r-y6-MUD"/>
                             <constraint firstItem="oCs-Nk-iK2" firstAttribute="top" secondItem="EBZ-fV-Ajb" secondAttribute="bottom" id="R7b-5v-WrN"/>
                             <constraint firstItem="78z-ja-4Dv" firstAttribute="top" secondItem="6wo-G2-Yjn" secondAttribute="bottom" constant="-20" id="T6j-LL-udg"/>
+                            <constraint firstItem="43c-4W-gQN" firstAttribute="leading" secondItem="93T-hj-QBo" secondAttribute="leadingMargin" constant="-16" id="ULy-Mb-2iG"/>
                             <constraint firstItem="oCs-Nk-iK2" firstAttribute="top" secondItem="gN2-3O-aZV" secondAttribute="bottom" id="UNx-ve-9GT"/>
+                            <constraint firstItem="FJd-Kt-t0k" firstAttribute="leading" secondItem="93T-hj-QBo" secondAttribute="leadingMargin" constant="-16" id="V0h-fv-Vrg"/>
                             <constraint firstItem="EBZ-fV-Ajb" firstAttribute="centerX" secondItem="93T-hj-QBo" secondAttribute="centerX" id="b9L-9i-WGj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gN2-3O-aZV" secondAttribute="trailing" constant="-21" id="cKs-fm-GsM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="43c-4W-gQN" secondAttribute="trailing" constant="-16" id="gLZ-Ha-RAe"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gN2-3O-aZV" secondAttribute="trailing" constant="-21" id="lmc-TQ-hYa"/>
                             <constraint firstItem="FJd-Kt-t0k" firstAttribute="centerX" secondItem="93T-hj-QBo" secondAttribute="centerX" id="n5s-s1-BTQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="EBZ-fV-Ajb" secondAttribute="trailing" constant="-20" id="pY0-XM-6Ml"/>
                             <constraint firstAttribute="trailingMargin" secondItem="gN2-3O-aZV" secondAttribute="trailing" constant="-21" id="pqa-JS-rSl"/>
                             <constraint firstItem="FJd-Kt-t0k" firstAttribute="top" secondItem="78z-ja-4Dv" secondAttribute="bottom" constant="52" id="tiN-wh-ZsD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="78z-ja-4Dv" secondAttribute="trailing" constant="-20" id="v6x-O5-Qb1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="FJd-Kt-t0k" secondAttribute="trailing" constant="-16" id="v6z-wP-KJl"/>
                             <constraint firstItem="EBZ-fV-Ajb" firstAttribute="leading" secondItem="93T-hj-QBo" secondAttribute="leadingMargin" constant="-20" id="vb2-WP-Txj"/>
                             <constraint firstItem="43c-4W-gQN" firstAttribute="centerX" secondItem="93T-hj-QBo" secondAttribute="centerX" id="xiA-yk-yDO"/>
                         </constraints>
@@ -264,7 +268,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xeg-nt-UfD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1446" y="1453"/>
+            <point key="canvasLocation" x="1445.625" y="1452.5"/>
         </scene>
         <!--Meme Detail View Controller-->
         <scene sceneID="F2g-Dz-lfA">
